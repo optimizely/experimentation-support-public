@@ -3,19 +3,14 @@ This is a repo for the Optimizely Experimenation App Support team, which can be 
 
 
 ## Instructions for hosting static files (JS/CSS/...) on GitHub and referencing them directly using jsdelivr.com
-1. Find your link on GitHub, and click to the "Raw" version.
-2. Copy the URL.
-3. Change raw.githubusercontent.com to cdn.jsdelivr.net
-4. Insert /gh/ before your username.
-5. Remove the branch name.
-(Optional) Insert the version you want to link to, as @version (if you do not do this, you will get the latest - which may cause long-term caching)
+To get the jsDelivr URLs for GitHub-hosted files, you can use the following format:
+https://cdn.jsdelivr.net/gh/:user/:repo@branch/:path
 
-**Example**:
+For example, here are the correct jsDelivr CDN links for the "cat" and "dog" files which are used in the Technical Interview for the Experimentation TSE role:
+cat.js
+https://cdn.jsdelivr.net/gh/optimizely/experimentation-support-public@main/cat-and-dog/cat.js
 
-<code>https://raw.githubusercontent.com/optimizely/experimentation-support-public/main/cat-and-dog/cat.js</code>
+dog.js
+https://cdn.jsdelivr.net/gh/optimizely/experimentation-support-public@main/cat-and-dog/dog.js
 
-becomes:
-
-<code>https://cdn.jsdelivr.net/gh/optimizely/experimentation-support-public/cat-and-dog/cat.js</code>
-
-This solution was found on https://stackoverflow.com/a/18049842
+These URLs serve the raw content directly from GitHub via jsDelivr’s CDN, which is great for performance and caching.
